@@ -30,10 +30,10 @@ export class AuthService {
   async login(username: string, password: string) {
     const { data } = await firstValueFrom(
       this.http.post(
-        'http://localhost:8080/auth/realms/pgm-manager/protocol/openid-connect/token',
+        'http://localhost:8080/auth/realms/PGM/protocol/openid-connect/token',
         new URLSearchParams({
-          client_id: 'pgm-manager-backend',
-          client_secret: 'BTxa6WJpJj8iyV0lBstn9PQ8BDoSVfKu',
+          client_id: 'pgm-manager',
+          client_secret: 'uImxPyYrFoPJPg6dZHgotbxPHPn57MbY',
           grant_type: 'password',
           username,
           password,
